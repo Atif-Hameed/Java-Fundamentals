@@ -9,7 +9,5 @@ public class Main {
        int b = sc.nextInt();
        int sum = a + b;
        System.out.println("The Sum of Numbers : "+sum);
-       Sample myObj = new Sample();
-       myObj.staticMethod();
    }
 }

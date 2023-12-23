@@ -108,9 +108,11 @@ public class Patterns {
         Scanner sc = new Scanner(System.in);
         System.out.print("Enter Rows : ");
         int r = sc.nextInt();
+        int number =1;
         for(int i=1; i<=r; i++){
             for (int j=1; j<=i; j++){
-                System.out.print(j);
+                System.out.print(number);
+                number++;
             }
             System.out.println();
         }
@@ -118,7 +120,7 @@ public class Patterns {
     public static void main(String[] args){
         Patterns myObj = new Patterns();
         Scanner sc = new Scanner(System.in);
-        System.out.print("Enter your choice : \n1-Rectangle : \n2-EmptyRectangle : \n3-Triangle : \n4-ReverseTrianle : \n5-rightTriangle : \n6-numberTriangle : \n7-reverseNumberTriangle :");
+        System.out.print("Enter your choice : \n1-Rectangle : \n2-EmptyRectangle : \n3-Triangle : \n4-ReverseTrianle : \n5-rightTriangle : \n6-numberTriangle : \n7-reverseNumberTriangle : \n8-NumberTriangle :");
         int n = sc.nextInt();
         switch (n){
             case 1 :{

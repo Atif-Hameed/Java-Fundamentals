@@ -117,10 +117,29 @@ public class Patterns {
             System.out.println();
         }
     }
+
+
+    public void zeroOneTrianle(){
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Enter Rows : ");
+        int r = sc.nextInt();
+        boolean num = true;
+        for(int i=1; i<=r; i++){
+            for(int j=1; j<=i; j++){
+                if(num){
+                    System.out.print(1);
+                }else {
+                    System.out.print(0);
+                }
+                num = !num;
+            }
+            System.out.println();
+        }
+    }
     public static void main(String[] args){
         Patterns myObj = new Patterns();
         Scanner sc = new Scanner(System.in);
-        System.out.print("Enter your choice : \n1-Rectangle : \n2-EmptyRectangle : \n3-Triangle : \n4-ReverseTrianle : \n5-rightTriangle : \n6-numberTriangle : \n7-reverseNumberTriangle : \n8-NumberTriangle :");
+        System.out.print("Enter your choice : \n1-Rectangle : \n2-EmptyRectangle : \n3-Triangle : \n4-ReverseTrianle : \n5-rightTriangle : \n6-numberTriangle : \n7-reverseNumberTriangle : \n8-NumberTriangle : \n9-zeroOneTriangle : ");
         int n = sc.nextInt();
         switch (n){
             case 1 :{
@@ -153,6 +172,10 @@ public class Patterns {
             }
             case 8 :{
                 myObj.allNumberTriangle();
+                break;
+            }
+            case 9 :{
+                myObj.zeroOneTrianle();
                 break;
             }
         }

@@ -68,10 +68,34 @@ public class PatternsExcercise {
         }
     }
 
+    public void combinePyramid(){
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Enter Rows : ");
+        int r = sc.nextInt();
+        for (int i=1; i<=r; i++){
+            for (int j=1; j<=i; j++){
+                System.out.print(" ");
+            }
+            for (int k=i; k<=r; k++){
+                System.out.print("* ");
+            }
+            System.out.println();
+        }
+        for (int i = r-1; i >= 1; i--){
+            for (int j=1; j<=i; j++){
+                System.out.print(" ");
+            }
+            for (int k=i; k<=r; k++){
+                System.out.print("* ");
+            }
+            System.out.println();
+        }
+    }
+
     public static void main(String[] args){
         PatternsExcercise myObj = new PatternsExcercise();
         Scanner sc = new Scanner(System.in);
-        System.out.print("1-Rhombus : \n2-HollowRohmbus : \n3-Pyramid : \n4-ReversePyramid : ");
+        System.out.print("1-Rhombus : \n2-HollowRohmbus : \n3-Pyramid : \n4-ReversePyramid : \n5-CombinePyramid : ");
         int n = sc.nextInt();
         switch (n){
             case 1:{
@@ -88,6 +112,10 @@ public class PatternsExcercise {
             }
             case 4:{
                 myObj.reversePyramid();
+                break;
+            }
+            case 5:{
+                myObj.combinePyramid();
                 break;
             }
         }

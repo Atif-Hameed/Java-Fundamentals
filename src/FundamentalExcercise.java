@@ -126,9 +126,9 @@ public class FundamentalExcercise {
         int n1 = sc.nextInt();
         System.out.print("Enter 2nd number : ");
         int n2 = sc.nextInt();
-        int result = 0;
+        int result = 1;
         for(int i=1; i<=n2; i++){
-            result = n1*n1;
+            result = result*n1;
         }
         System.out.print("Answer : "+result);
     }

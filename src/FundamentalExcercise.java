@@ -133,28 +133,79 @@ public class FundamentalExcercise {
         System.out.print("Answer : "+result);
     }
 
+    public void q9(){
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Enter first number : ");
+        int n1 = sc.nextInt();
+        System.out.print("Enter second number : ");
+        int n2 = sc.nextInt();
+        int gcd = 1;
+        for(int i=1; i<=n1 && i<=n2; i++){
+            if(n1%i == 0 && n2%i == 0){
+                gcd = i;
+            }
+        }
+        System.out.print("Greatest Commmon Divisor : "+ gcd);
+
+    }
+
+    public void q10(){
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Enter the number for Fibonacci Series : ");
+        int n = sc.nextInt();
+        int t1=0, t2=1, nextTerm=0;
+        for(int i=1; i<=n; i++){
+            if(i == 1){
+                System.out.print(t1+ " ");
+                continue;
+            }
+            if(i == 2){
+                System.out.print(t2+ " ");
+                continue;
+            }
+            nextTerm = t1 + t2;
+            t1 = t2;
+            t2 = nextTerm;
+            System.out.print(nextTerm + " ");
+        }
+    }
+
     public static void main(String[] args) {
         FundamentalExcercise obj = new FundamentalExcercise();
-        System.out.print("Enter Question Number\nQuestion 1 : \nQuestion 2 : \nQuestion 3 : \nQuestion 4 : \nQuestion 5 : \nQuestion 6 (Infinit Loop): \nQuestion 7 : \nQuestion 8 : ");
+        System.out.print("Enter Question Number\nQuestion 1 : \nQuestion 2 : \nQuestion 3 : \nQuestion 4 : \nQuestion 5 : \nQuestion 6 (Infinit Loop): \nQuestion 7 : \nQuestion 8 : \nQuestion 9 : \nQuestion 10 :");
         Scanner sc = new Scanner(System.in);
         int choose = sc.nextInt();
         switch (choose) {
             case 1:
                 obj.q1();
+                break;
             case 2:
                 obj.q2();
+                break;
             case 3:
                 obj.q3();
+                break;
             case 4:
                 obj.q4();
+                break;
             case 5:
                 obj.q5();
+                break;
             case 6:
                 obj.q6();
+                break;
             case 7:
                 obj.q7();
+                break;
             case 8:
                 obj.q8();
+                break;
+            case 9:
+                obj.q9();
+                break;
+            case 10:
+                obj.q10();
+                break;
         }
     }
 

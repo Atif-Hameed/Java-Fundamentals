@@ -3,6 +3,15 @@ import java.util.*;
 public class Conditional {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
+        System.out.println("Enter a number : ");
+        int number = sc.nextInt();
+        if(number > 0){
+            System.out.println("Number is greater then Zero");
+        } else if (number < 0) {
+            System.out.println("Number is less then Zero");
+        }else {
+            System.out.println("Number is Zero");
+        }
         int i = 0;
         while (i < 3) {
             System.out.print("Enter Your Age : ");

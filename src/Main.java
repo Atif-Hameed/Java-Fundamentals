@@ -9,5 +9,14 @@ public class Main {
        int b = sc.nextInt();
        int sum = a + b;
        System.out.println("The Sum of Numbers : "+sum);
+       Main object = new Main();
+       object.RandomFucntion();
+   }
+
+   public void RandomFucntion(){
+       Scanner sc = new Scanner(System.in);
+       System.out.println("What is your name ?");
+       String name = sc.nextLine();
+       System.out.println("Your name is : "+name);
    }
 }

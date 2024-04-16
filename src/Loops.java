@@ -94,30 +94,30 @@ public class Loops {
         System.out.print("Enter a number : ");
         Scanner sc = new Scanner(System.in);
         int num = sc.nextInt();
-        if (num <= 1) {
-            System.out.println("Wrong Input");
-        } else {
-            boolean isPrime = false;
-            for (int i = 2; i <= 9; i++) {
-                if(i == num){
-                    continue;
-                }
-                if (num % i == 0) {
-                    isPrime = true;
-                    break;
-                }
-            }
-            if (isPrime) {
-                System.out.println("This is Not a Prime Number");
-            } else {
-                System.out.println("Number is Prime");
-            }
-        }
+       if(num < 1){
+           System.out.println("Wrong Number is Provided");
+       }else {
+           boolean isPrime = true;
+           for (int i=2;i<=9;i++){
+               if(num == i){
+                   continue;
+               }
+               if(num%i == 0){
+                       isPrime = false;
+                   }
+           }
+           if(isPrime){
+               System.out.println("Number is Prime");
+           }else {
+               System.out.println("Number is not Prime");
+           }
+       }
     }
 
     public static void main(String[] args) {
         Loops myObj = new Loops();
         Scanner sc = new Scanner(System.in);
+
         System.out.println("Please Select a Loop and hit Enter\n1-forLoop\n2-whileLoop\n3-doWhileLoop\n4-SolveProblem\n5-TableGenerate\n6-printEvenSumOdd\n7-StudentProblem\n8-checkPrime");
         int num = sc.nextInt();
 

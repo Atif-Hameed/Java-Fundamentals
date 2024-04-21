@@ -44,7 +44,7 @@ public class arrayExcercise {
             }
         }
         if (sort) {
-            System.out.println("Array sorted");
+            System.out.println("\nArray sorted");
         } else {
             System.out.println("Array not sorted");
         }
@@ -78,6 +78,32 @@ public class arrayExcercise {
             }
         }
 
+        int[] array1 = new int[]{1,2,3};
+        int[] array2 = new int[]{4,5,6};
+
+        int newArrayLen = array1.length +  array2.length;
+
+        int[] newArray = new int[newArrayLen];
+        int index = 0;
+
+        //copy elements from array1
+        for (int i =0; i<array1.length; i++){
+            newArray[index] = array1[i];
+            index++;
+        }
+
+        //copy elements from array2
+        for (int i=0 ; i<array2.length; i++){
+            newArray[index] = array2[i];
+            index++;
+        }
+
+        System.out.print("Merged Array = "+"[ ");
+        for (int i=0; i<newArrayLen; i++){
+            System.out.print(newArray[i]+" ");
+        }
+        System.out.print("]\n");
+
           //print even elemts
         System.out.print("Even Elements : [ ");
         for (int i=0; i<evenArray.length; i++){
@@ -86,7 +112,7 @@ public class arrayExcercise {
         System.out.print(" ]");
 
         //print odd elements
-        System.out.print("Odd Elements : [ ");
+        System.out.print("\nOdd Elements : [ ");
         for (int i=0; i<oddArray.length; i++){
             System.out.print(oddArray[i]+" ");
         }

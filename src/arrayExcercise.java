@@ -24,12 +24,16 @@ public class arrayExcercise {
         System.out.print(" ]");
 
         max = myArray[0];
+        int sndMax = myArray[1];
         min = myArray[0];
         for (int i = 0; i < len; i++) {
             sum = myArray[i] + sum;
             mult = myArray[i] * mult;
             if (myArray[i] > max) {
+                sndMax = max;
                 max = myArray[i];
+            } else if (myArray[i] > sndMax && myArray[i] != max) {
+                sndMax = myArray[i];
             }
             if (myArray[i] < min) {
                 min = myArray[i];
@@ -127,9 +131,17 @@ public class arrayExcercise {
         }
         System.out.print("]");
 
+        for (int i=len-1;i>=0; i--){
+            if(myArray[i] == myArray[i+1]){
+                
+            }
+        }
+
+
         System.out.println("\nSUm : " + sum);
         System.out.println("Multiplication : " + mult);
         System.out.println("Max : " + max);
+        System.out.println("2nd Max : "+sndMax);
         System.out.println("Min : " + min);
     }
 }

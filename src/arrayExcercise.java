@@ -131,11 +131,21 @@ public class arrayExcercise {
         }
         System.out.print("]");
 
-        for (int i=len-1;i>=0; i--){
-            if(myArray[i] == myArray[i+1]){
-                
+
+        int[] dubleLessArray = new int[myArray.length-1];
+
+        for (int i=0;i<2; i++){
+            if(myArray[i] != myArray[i+1]){
+                dubleLessArray[index] = myArray[i];
+                index++;
             }
         }
+
+        System.out.println("Dublicate Less Array :  [ ");
+        for (int i=0; i<dubleLessArray.length; i++){
+            System.out.print(dubleLessArray[i]+" ");
+        }
+        System.out.print(" ]");
 
 
         System.out.println("\nSUm : " + sum);

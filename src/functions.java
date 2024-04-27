@@ -19,5 +19,11 @@ public class functions {
     public static void main(String[] args){
         functions myObj = new functions();
         myObj.factorial();
+        int result = myObj.sumNumbers(99999);
+        System.out.println("Sum of N numbers : "+result);
+    }
+
+    public int sumNumbers(int n){
+        return n*(n+1)/2;
     }
 }
